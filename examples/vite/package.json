@@ -1,5 +1,5 @@
 {
-  "name": "@react-7tv-wrapper/example-vite",
+  "name": "@react-7tv/example-vite",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-7tv-wrapper/example-data": "*",
+    "@react-7tv/example-data": "*",
     "react": "^19.2.8",
-    "react-7tv-wrapper": "file:../..",
+    "react-7tv": "file:../..",
     "react-dom": "^19.2.8"
   },
   "devDependencies": {

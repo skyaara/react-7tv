@@ -1,4 +1,4 @@
-import type { SevenTVEmote } from "react-7tv-wrapper/core";
+import type { SevenTVEmote } from "react-7tv/core";
 
 const sizes = [1, 2, 3, 4] as const;
 

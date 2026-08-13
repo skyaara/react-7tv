@@ -1,5 +1,5 @@
-import { demoEmotes } from "@react-7tv-wrapper/example-data";
-import { fetchEmoteSet } from "react-7tv-wrapper/core";
+import { demoEmotes } from "@react-7tv/example-data";
+import { fetchEmoteSet } from "react-7tv/core";
 import { EmoteMessage } from "./EmoteMessage";
 
 // Keep the demo honest: the latest global set is loaded on the server per request,

@@ -1,4 +1,4 @@
-import { demoEmotes } from "@react-7tv-wrapper/example-data";
+import { demoEmotes } from "@react-7tv/example-data";
 import { useState } from "react";
 import {
   delimitedSyntax,
@@ -6,7 +6,7 @@ import {
   SevenTVText,
   useSevenTV,
   type SevenTVSyntax,
-} from "react-7tv-wrapper";
+} from "react-7tv";
 
 const syntaxes = {
   plain: { type: "plain" },

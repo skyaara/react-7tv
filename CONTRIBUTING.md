@@ -1,6 +1,6 @@
 # Contributing
 
-Thank you for improving `react-7tv-wrapper`.
+Thank you for improving `react-7tv`.
 
 ## Setup
 

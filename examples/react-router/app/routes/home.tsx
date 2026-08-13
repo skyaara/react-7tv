@@ -1,11 +1,11 @@
-import { demoEmotes } from "@react-7tv-wrapper/example-data";
+import { demoEmotes } from "@react-7tv/example-data";
 import { useState } from "react";
 import {
   delimitedSyntax,
   SevenTVProvider,
   SevenTVText,
-} from "react-7tv-wrapper";
-import { fetchEmoteSet } from "react-7tv-wrapper/core";
+} from "react-7tv";
+import { fetchEmoteSet } from "react-7tv/core";
 import type { Route } from "./+types/home";
 
 export function meta(): Route.MetaDescriptors {

@@ -6,5 +6,5 @@ colon-syntax message composer.
 ```sh
 npm install
 npm run build
-npm run dev --workspace @react-7tv-wrapper/example-react-router
+npm run dev --workspace @react-7tv/example-react-router
 ```

@@ -1,6 +1,6 @@
-import { demoEmotes } from "@react-7tv-wrapper/example-data";
+import { demoEmotes } from "@react-7tv/example-data";
 import { useEffect, useState } from "react";
-import { SevenTVEmote } from "react-7tv-wrapper";
+import { SevenTVEmote } from "react-7tv";
 
 const cardCount = 5;
 

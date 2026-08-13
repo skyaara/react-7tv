@@ -1,5 +1,5 @@
 {
-  "name": "@react-7tv-wrapper/example-react-router",
+  "name": "@react-7tv/example-react-router",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -11,12 +11,12 @@
     "typecheck": "react-router typegen && tsc --noEmit"
   },
   "dependencies": {
-    "@react-7tv-wrapper/example-data": "*",
+    "@react-7tv/example-data": "*",
     "@react-router/node": "^7.18.2",
     "@react-router/serve": "^7.18.2",
     "isbot": "^5.1.32",
     "react": "^19.2.8",
-    "react-7tv-wrapper": "file:../..",
+    "react-7tv": "file:../..",
     "react-dom": "^19.2.8",
     "react-router": "^7.18.2"
   },

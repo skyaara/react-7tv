@@ -8,5 +8,5 @@ From the repository root:
 ```sh
 npm install
 npm run build
-npm run dev --workspace @react-7tv-wrapper/example-vite
+npm run dev --workspace @react-7tv/example-vite
 ```

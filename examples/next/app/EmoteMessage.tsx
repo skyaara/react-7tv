@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import type { SevenTVEmote } from "react-7tv-wrapper/core";
-import { SevenTVProvider, SevenTVText } from "react-7tv-wrapper";
+import type { SevenTVEmote } from "react-7tv/core";
+import { SevenTVProvider, SevenTVText } from "react-7tv";
 
 export function EmoteMessage({
   emotes,

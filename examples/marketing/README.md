@@ -1,6 +1,6 @@
 # Astro marketing site
 
-The public-facing product site for `react-7tv-wrapper`. Astro renders the shell
+The public-facing product site for `react-7tv`. Astro renders the shell
 to static HTML and hydrates only the React playground.
 
 ```sh

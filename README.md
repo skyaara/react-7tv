@@ -1,4 +1,4 @@
-# react-7tv-wrapper
+# react-7tv
 
 Composable, typed, and SSR-safe React components for replacing inline text with
 [7TV](https://7tv.app/) emotes. It targets React 19.2+ and common React DOM
@@ -20,7 +20,7 @@ environments including Next.js, Remix, Vite, and Create React App.
 ## Install
 
 ```sh
-npm install react-7tv-wrapper
+npm install react-7tv
 ```
 
 `react` is a peer dependency. `react-dom` is only needed by your application.
@@ -32,7 +32,7 @@ import {
   SevenTVProvider,
   SevenTVText,
   delimitedSyntax,
-} from "react-7tv-wrapper";
+} from "react-7tv";
 
 export function ChatMessage({ message }: { message: string }) {
   return (
@@ -124,7 +124,7 @@ effects. Data utilities are also available from a separate server-safe entry:
 
 ```tsx
 // app/chat/page.tsx — Server Component
-import { fetchEmoteSet } from "react-7tv-wrapper/core";
+import { fetchEmoteSet } from "react-7tv/core";
 import { EmoteMessage } from "./emote-message";
 
 export default async function Page() {
@@ -137,8 +137,8 @@ export default async function Page() {
 // app/chat/emote-message.tsx — Client Component
 "use client";
 
-import type { SevenTVEmote } from "react-7tv-wrapper/core";
-import { SevenTVProvider, SevenTVText } from "react-7tv-wrapper";
+import type { SevenTVEmote } from "react-7tv/core";
+import { SevenTVProvider, SevenTVText } from "react-7tv";
 
 export function EmoteMessage({
   emotes,
@@ -221,7 +221,7 @@ The main entry exports:
 - `resolveEmoteImage()`
 - all associated TypeScript types
 
-`react-7tv-wrapper/core` exports only framework-neutral fetching, normalization,
+`react-7tv/core` exports only framework-neutral fetching, normalization,
 matching utilities, and data types. Both entrypoints support ESM and CommonJS.
 
 ## API stability

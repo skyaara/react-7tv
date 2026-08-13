@@ -1,4 +1,4 @@
-import { demoEmotes } from "@react-7tv-wrapper/example-data";
+import { demoEmotes } from "@react-7tv/example-data";
 import { useMemo, useRef, useState } from "react";
 import {
   createEmoteMap,
@@ -8,7 +8,7 @@ import {
   SevenTVText,
   tokenizeText,
   type SevenTVSyntax,
-} from "react-7tv-wrapper";
+} from "react-7tv";
 
 type Mode = "plain" | "colon" | "bracket";
 
