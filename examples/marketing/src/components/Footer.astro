@@ -1,0 +1,43 @@
+---
+import Logo from "./Logo.astro";
+---
+
+<footer>
+  <div class="shell footer-inner">
+    <div>
+      <Logo />
+      <p>Make chat interfaces feel native, expressive, and alive.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#playground">Playground</a>
+      <a href="/examples/">Examples</a>
+      <a href="https://7tv.app/" target="_blank" rel="noreferrer">Visit 7TV ↗</a>
+    </div>
+    <div class="attribution">
+      <a href="https://7tv.app/" target="_blank" rel="noreferrer">
+        <span aria-hidden="true">7</span>
+        <strong>Emotes powered by 7TV</strong>
+      </a>
+      <p class="legal">MIT licensed · Community project · Not affiliated with 7TV</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer { border-top: 1px solid var(--line); background: #d9ff43; }
+  .footer-inner { display: grid; grid-template-columns: 1.4fr 1fr auto; gap: 40px; align-items: end; padding-block: 56px; }
+  p { max-width: 330px; margin: 18px 0 0; color: #3f4725; font-size: 13px; line-height: 1.6; }
+  .footer-links { display: grid; gap: 10px; }
+  .footer-links a { color: var(--ink); text-decoration: none; font-size: 12px; }
+  .attribution { display: grid; justify-items: end; gap: 13px; }
+  .attribution > a { display: inline-flex; align-items: center; gap: 8px; padding: 7px 10px 7px 7px; border: 1px solid var(--ink); border-radius: 99px; color: var(--ink); background: rgba(245,241,232,.44); text-decoration: none; transition: background .2s ease, transform .2s ease; }
+  .attribution > a:hover { background: var(--paper); transform: translateY(-2px); }
+  .attribution > a span { display: grid; width: 22px; height: 22px; place-items: center; border-radius: 50%; color: var(--acid); background: var(--ink); font: 900 12px var(--sans); }
+  .attribution > a strong { font: 750 10px var(--sans); }
+  .legal { margin: 0; max-width: 290px; white-space: normal; font: 9px/1.5 var(--mono); text-align: right; text-transform: uppercase; }
+  @media (max-width: 720px) {
+    .footer-inner { grid-template-columns: 1fr; align-items: start; }
+    .attribution { justify-items: start; }
+    .legal { text-align: left; }
+  }
+</style>

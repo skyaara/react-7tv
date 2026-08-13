@@ -1,0 +1,99 @@
+{
+  "name": "react-7tv-wrapper",
+  "version": "0.1.0",
+  "description": "Composable, SSR-safe React components for replacing inline text with 7TV emotes.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/client/index.cjs",
+  "module": "./dist/client/index.js",
+  "types": "./dist/client/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/client/index.d.ts",
+        "default": "./dist/client/index.js"
+      },
+      "require": {
+        "types": "./dist/client/index.d.cts",
+        "default": "./dist/client/index.cjs"
+      }
+    },
+    "./core": {
+      "import": {
+        "types": "./dist/core/index.d.ts",
+        "default": "./dist/core/index.js"
+      },
+      "require": {
+        "types": "./dist/core/index.d.cts",
+        "default": "./dist/core/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/client",
+    "dist/core",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@11.6.1",
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "workspaces": [
+    "examples/*"
+  ],
+  "overrides": {
+    "tsup": {
+      "esbuild": "^0.28.2"
+    }
+  },
+  "peerDependencies": {
+    "react": ">=19.2.0 <20.0.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "check": "npm run typecheck && npm run lint && npm run test && npm run build && npm run publint",
+    "check:all": "npm run check && npm run examples:build",
+    "examples:build": "npm run build --workspace @react-7tv-wrapper/example-vite && npm run build --workspace @react-7tv-wrapper/example-next && npm run build --workspace @react-7tv-wrapper/example-react-router && npm run build --workspace @react-7tv-wrapper/marketing",
+    "lint": "npm run typegen --workspace @react-7tv-wrapper/example-react-router && eslint .",
+    "marketing:dev": "npm run dev --workspace @react-7tv-wrapper/marketing",
+    "prepublishOnly": "npm run check",
+    "publint": "publint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.33.0",
+    "@types/node": "^24.2.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@testing-library/react": "^16.3.0",
+    "eslint": "^9.33.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "jsdom": "^26.1.0",
+    "publint": "^0.3.23",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tsup": "^8.5.0",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.39.1",
+    "vite": "^6.4.3",
+    "vitest": "^3.2.4"
+  },
+  "keywords": [
+    "7tv",
+    "emotes",
+    "react",
+    "twitch",
+    "kick",
+    "youtube"
+  ]
+}

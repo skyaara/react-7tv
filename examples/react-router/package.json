@@ -1,0 +1,33 @@
+{
+  "name": "@react-7tv-wrapper/example-react-router",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "react-router dev",
+    "build": "npm run typecheck && react-router build",
+    "start": "react-router-serve ./build/server/index.js",
+    "typegen": "react-router typegen",
+    "typecheck": "react-router typegen && tsc --noEmit"
+  },
+  "dependencies": {
+    "@react-7tv-wrapper/example-data": "*",
+    "@react-router/node": "^7.18.2",
+    "@react-router/serve": "^7.18.2",
+    "isbot": "^5.1.32",
+    "react": "^19.2.8",
+    "react-7tv-wrapper": "file:../..",
+    "react-dom": "^19.2.8",
+    "react-router": "^7.18.2"
+  },
+  "devDependencies": {
+    "@react-router/dev": "^7.18.2",
+    "@types/node": "^24.2.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

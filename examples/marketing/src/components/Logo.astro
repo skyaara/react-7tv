@@ -1,0 +1,68 @@
+---
+interface Props {
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+---
+
+<a class:list={["logo", { compact }]} href="/" aria-label="react-7tv-wrapper home">
+  <svg class="logo-symbol" viewBox="0 0 64 64" role="img" aria-label="Animated 7TV orbit logo">
+    <g transform="rotate(0 32 32)">
+      <g class="mark-track track-one">
+        <ellipse cx="32" cy="32" rx="27" ry="10" />
+        <circle cx="59" cy="32" r="3.2" />
+      </g>
+    </g>
+    <g transform="rotate(60 32 32)">
+      <g class="mark-track track-two">
+        <ellipse cx="32" cy="32" rx="27" ry="10" />
+        <circle cx="59" cy="32" r="2.8" />
+      </g>
+    </g>
+    <g transform="rotate(120 32 32)">
+      <g class="mark-track track-three">
+        <ellipse cx="32" cy="32" rx="27" ry="10" />
+        <circle cx="59" cy="32" r="2.4" />
+      </g>
+    </g>
+    <circle class="mark-halo" cx="32" cy="32" r="14" />
+    <circle class="mark-core" cx="32" cy="32" r="12" />
+    <text class="mark-seven" x="23" y="40">7</text>
+    <text class="mark-tv" x="35" y="36.5">TV</text>
+  </svg>
+  <span class="logo-copy">
+    <b>react</b>
+    {!compact && <small>7tv wrapper</small>}
+  </span>
+</a>
+
+<style>
+  .logo { display: inline-flex; align-items: center; gap: 9px; width: fit-content; color: inherit; text-decoration: none; }
+  .logo-symbol { overflow: visible; width: 50px; height: 50px; flex: 0 0 auto; }
+  .mark-track { transform-box: view-box; transform-origin: 32px 32px; }
+  .mark-track ellipse { fill: none; stroke: var(--violet); stroke-width: 2.15; }
+  .mark-track circle { fill: var(--violet); stroke: var(--paper); stroke-width: 1.2; }
+  .track-one { animation: logo-orbit 7s linear infinite; }
+  .track-two { animation: logo-orbit 9s linear infinite reverse; }
+  .track-three { animation: logo-orbit 11s linear infinite; }
+  .track-two ellipse { stroke: var(--ink); opacity: .72; }
+  .track-two circle { fill: var(--acid); stroke: var(--ink); }
+  .track-three { opacity: .62; }
+  .mark-halo { fill: var(--acid); animation: logo-breathe 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+  .mark-core { fill: var(--ink); stroke: var(--paper); stroke-width: 1; }
+  .mark-seven, .mark-tv { fill: var(--paper); font-family: var(--sans); font-weight: 900; pointer-events: none; }
+  .mark-seven { font-size: 22px; letter-spacing: -.08em; }
+  .mark-tv { fill: var(--acid); font-size: 6.5px; letter-spacing: -.04em; }
+  .logo:hover .mark-track, .logo:focus-visible .mark-track { animation-play-state: paused; }
+  .logo:focus-visible { outline: 2px solid var(--violet); outline-offset: 5px; border-radius: 4px; }
+  .logo-copy { display: grid; line-height: 1; }
+  .logo-copy b { font: 720 14px/1 var(--sans); letter-spacing: -.02em; }
+  .logo-copy small { margin-top: 4px; color: var(--muted); font: 600 8px/1 var(--mono); letter-spacing: .13em; text-transform: uppercase; }
+  .compact .logo-copy { display: none; }
+  @keyframes logo-orbit { to { transform: rotate(1turn); } }
+  @keyframes logo-breathe { 50% { transform: scale(1.08); } }
+  @media (prefers-reduced-motion: reduce) {
+    .mark-track, .mark-halo { animation: none; }
+  }
+</style>

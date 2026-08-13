@@ -1,0 +1,12 @@
+{
+  "name": "@react-7tv-wrapper/example-data",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "react-7tv-wrapper": "file:../.."
+  }
+}

@@ -1,0 +1,9 @@
+node_modules/
+dist/
+build/
+.astro/
+.next/
+.react-router/
+coverage/
+*.log
+.DS_Store
